@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>کافه آرام | طعم آرامش</title>
+<link href="lo.png" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<a class="logo" href="#home">
+<img alt="لوگوی کافه آرام" src="./lo.png"/>
+</a>
+<button aria-label="باز کردن منو" class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+<nav id="navbar">
+<a href="#home">صفحه اصلی</a>
+<a href="#menu">منوی کافه</a>
+<a href="about.html">درباره ما</a>
+<a href="reservation.html">رزرو کافه</a>
+<a href="profile.html">پروفایل من</a>
+</nav>
+<button aria-label="باز کردن سبد خرید" class="header-cart" id="openCart" type="button">
+    🛒
+    <span id="cartCount">۰</span>
+</button>
+</header>
+<main>
+<section class="hero hero-home" id="home">
+<div aria-label="تصاویر محیط کافه آرام" class="hero-slideshow">
+<img alt="فضای گرم و دنج کافه آرام" class="hero-slide active" src="./images/home-cafe-interior.jpg"/>
+<img alt="نمایی از فضای داخلی کافه آرام" class="hero-slide" src="./images/home-cafe-coffee-corner.jpg"/>
+<img alt="گوشه مطالعه و کتابخانه کافه" class="hero-slide" src="./images/home-cafe-reading-corner.jpg"/>
+</div><div class="hero-shade"></div>
+<div class="hero-caption"><h1>به کافه آرام خوش آمدید</h1><p>جایی برای نوشیدن یک فنجان آرامش</p></div>
+<div aria-label="انتخاب تصویر" class="hero-dots"><button aria-label="تصویر اول" class="hero-dot active" data-slide="0" type="button"></button><button aria-label="تصویر دوم" class="hero-dot" data-slide="1" type="button"></button><button aria-label="تصویر سوم" class="hero-dot" data-slide="2" type="button"></button></div>
+</section>
+<section class="welcome">
+<span class="section-label">WELCOME TO CALM CAFE</span>
+<h2>آرامش از همین‌جا شروع می‌شود</h2>
+<p>
+            در کافه آرام، هر فنجان قهوه داستانی از عطر،
+            طعم و آرامش را برای شما روایت می‌کند.
+        </p>
+</section>
+<section class="section menu-section" id="menu">
+<div class="section-heading">
+<span class="section-label">طعم آرامش</span>
+<h2>منوی کافه</h2>
+<p class="section-description">
+            نوشیدنی و خوراکی مورد علاقه‌ات رو انتخاب کن.
+        </p>
+</div>
+<div class="products-grid">
+<!-- اسپرسو -->
+<article class="product-card">
+<img alt="اسپرسو" src="./images/menu-espresso.jpg"/>
+<div class="product-info">
+<h3>اسپرسو</h3>
+<p>قهوه‌ای غلیظ با عطر و طعم دلنشین</p>
+<strong class="product-price">۸۰٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-espresso">تعداد:</label>
+<input class="product-qty" id="qty-espresso" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="espresso" data-name="اسپرسو" data-price="80000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<!-- لاته -->
+<article class="product-card">
+<img alt="لاته" src="./images/menu-latte.jpg"/>
+<div class="product-info">
+<h3>لاته</h3>
+<p>ترکیب اسپرسو و شیر با فوم لطیف</p>
+<strong class="product-price">۱۲۰٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-latte">تعداد:</label>
+<input class="product-qty" id="qty-latte" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="latte" data-name="لاته" data-price="120000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<!-- کاپوچینو -->
+<article class="product-card">
+<img alt="کاپوچینو" src="./images/menu-cappuccino.jpg"/>
+<div class="product-info">
+<h3>کاپوچینو</h3>
+<p>قهوه‌ای خوش‌عطر با فوم شیر</p>
+<strong class="product-price">۱۱۵٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-cappuccino">تعداد:</label>
+<input class="product-qty" id="qty-cappuccino" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="cappuccino" data-name="کاپوچینو" data-price="115000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<!-- کیک شکلاتی -->
+<article class="product-card">
+<img alt="کیک شکلاتی" src="./images/menu-chocolate-cake.jpg"/>
+<div class="product-info">
+<h3>کیک شکلاتی</h3>
+<p>کیک نرم و شکلاتی برای یک عصر دلپذیر</p>
+<strong class="product-price">۱۵۰٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-cake">تعداد:</label>
+<input class="product-qty" id="qty-cake" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="cake" data-name="کیک شکلاتی" data-price="150000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<!-- کروسان -->
+<article class="product-card">
+<img alt="کروسان" src="./images/menu-croissant.jpg"/>
+<div class="product-info">
+<h3>کروسان</h3>
+<p>کروسان تازه و کره‌ای</p>
+<strong class="product-price">۹۵٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-croissant">تعداد:</label>
+<input class="product-qty" id="qty-croissant" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="croissant" data-name="کروسان" data-price="95000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<!-- چیزکیک -->
+<article class="product-card">
+<img alt="چیزکیک" src="./images/menu-cheesecake.jpg"/>
+<div class="product-info">
+<h3>چیزکیک</h3>
+<p>دسر لطیف با طعم توت‌فرنگی</p>
+<strong class="product-price">۱۴۰٬۰۰۰ تومان</strong>
+<div class="product-actions">
+<label for="qty-cheesecake">تعداد:</label>
+<input class="product-qty" id="qty-cheesecake" max="20" min="1" type="number" value="1"/>
+<button class="add-to-cart" data-id="cheesecake" data-name="چیزکیک" data-price="140000">
+                        افزودن به سفارش
+                    </button>
+</div>
+</div>
+</article>
+<article class="product-card"><img alt="آمریکانو" src="./images/menu-americano.jpg"/><div class="product-info"><h3>آمریکانو</h3><p>اسپرسو با آب داغ و طعمی ملایم</p><strong class="product-price">۹۰٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-americano">تعداد:</label><input class="product-qty" id="qty-americano" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="americano" data-name="آمریکانو" data-price="90000">افزودن به سفارش</button></div></div></article>
+<article class="product-card"><img alt="موکا" src="./images/menu-mocha.jpg"/><div class="product-info"><h3>موکا</h3><p>ترکیب قهوه، شیر و شکلات</p><strong class="product-price">۱۳۰٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-mocha">تعداد:</label><input class="product-qty" id="qty-mocha" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="mocha" data-name="موکا" data-price="130000">افزودن به سفارش</button></div></div></article>
+<article class="product-card"><img alt="هات چاکلت" src="./images/menu-hot-chocolate.jpg"/><div class="product-info"><h3>هات چاکلت</h3><p>شکلات داغ و شیرین برای روزهای خنک</p><strong class="product-price">۱۲۵٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-hotchocolate">تعداد:</label><input class="product-qty" id="qty-hotchocolate" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="hotchocolate" data-name="هات چاکلت" data-price="125000">افزودن به سفارش</button></div></div></article>
+<article class="product-card"><img alt="براونی شکلاتی" src="./images/menu-brownie.jpg"/><div class="product-info"><h3>براونی شکلاتی</h3><p>کیک شکلاتی فشرده با بافت نرم</p><strong class="product-price">۱۳۵٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-brownie">تعداد:</label><input class="product-qty" id="qty-brownie" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="brownie" data-name="براونی شکلاتی" data-price="135000">افزودن به سفارش</button></div></div></article>
+<article class="product-card"><img alt="پنینی مرغ" src="./images/menu-panini.jpg"/><div class="product-info"><h3>پنینی مرغ</h3><p>ساندویچ گرم با مرغ و پنیر</p><strong class="product-price">۱۸۰٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-panini">تعداد:</label><input class="product-qty" id="qty-panini" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="panini" data-name="پنینی مرغ" data-price="180000">افزودن به سفارش</button></div></div></article>
+<article class="product-card"><img alt="تیرامیسو" src="./images/menu-tiramisu.jpg"/><div class="product-info"><h3>تیرامیسو</h3><p>دسر لطیف با عطر قهوه و کاکائو</p><strong class="product-price">۱۶۰٬۰۰۰ تومان</strong><div class="product-actions"><label for="qty-tiramisu">تعداد:</label><input class="product-qty" id="qty-tiramisu" max="20" min="1" type="number" value="1"/><button class="add-to-cart" data-id="tiramisu" data-name="تیرامیسو" data-price="160000">افزودن به سفارش</button></div></div></article>
+</div>
+</section>
+</main>
+<!-- پنجره بازشونده سبد خرید -->
+<div aria-hidden="true" class="cart-overlay" id="cartOverlay">
+<section aria-labelledby="cartTitle" aria-modal="true" class="cart-modal" role="dialog">
+<div class="cart-modal-header">
+<div>
+<span class="section-label">YOUR ORDER</span>
+<h2 id="cartTitle">سبد سفارش شما</h2>
+<p>انتخاب‌های خوشمزه‌ات اینجاست ☕</p>
+</div>
+<button aria-label="بستن سبد خرید" class="cart-close" id="closeCart" type="button">×</button>
+</div>
+<div class="cart-content">
+<div class="cart-table-wrapper">
+<table class="cart-table">
+<thead>
+<tr>
+<th>محصول</th>
+<th>قیمت واحد</th>
+<th>تعداد</th>
+<th>جمع</th>
+<th>حذف</th>
+</tr>
+</thead>
+<tbody id="cartItems">
+<tr><td class="empty-cart-cell" colspan="5">هنوز محصولی انتخاب نشده است.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="cart-empty" id="cartEmpty">
+<span>🛍️</span>
+<strong>سبد خریدت هنوز خالیه</strong>
+<p>از منوی کافه، چیزی خوشمزه انتخاب کن.</p>
+<button class="continue-shopping" id="continueShopping" type="button">رفتن به منو</button>
+</div>
+</div>
+<div class="cart-footer">
+<div class="cart-total">
+<span>مبلغ نهایی سفارش</span>
+<strong id="cartTotal">۰ تومان</strong>
+</div>
+<div class="cart-footer-actions">
+<button class="clear-cart" id="clearCart" type="button">خالی کردن سبد</button>
+<button class="continue-shopping" id="continueShoppingBottom" type="button">ادامه خرید</button>
+</div>
+<p aria-live="polite" class="cart-message" id="cartMessage"></p>
+</div>
+</section>
+</div>
+<footer>
+    <h3>☕ کافه آرام</h3>
+    <p>لحظه‌های خوب، با طعم قهوه</p><p>راه ارتباطی: elnaz kiani .gimli.com</p>
+    <p class="copyright">
+        © <span id="year"></span> کافه آرام | طراحی شده با عشق
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
